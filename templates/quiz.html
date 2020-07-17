@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class = "head">
+  <link href="static/quiz.css" rel="stylesheet">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">  
-  What headset is right for you? Take this short quiz and we'll determine what the right fit is.
+  <h1 class = "monospace">Which headset is right for you? Take this short quiz and we'll determine what the right fit is.</h1>
 </head>
+<style>
+h1 {text-align: center;}
+div {text-align: center;}
+.grid-container {
+  display: grid;
+  justify-content: space-evenly;
+}
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+}
+</style>
 <body>
-<p>What platform do you play on?</p>
-<form method = "post" action = "/results"> 
-<select value = "platform" name = "platform"> Platform
-    <option value = "answer">Choose answer here</option>
-    <option value = "ps4">Playstation 4</option>
-    <option value = "xbox">Xbox One</option>
-    <option value = "pc">PC</option>
-    <option value = "nintendo switch">Nintendo Switch</option>
-    <option value = "phone">Phone</option>
-</select>
-<p>What's your favorite video game genre?</p>
-<select value = "genre" name = "genre"> Platform
-    <option value = "answer">Choose answer here</option>
-    <option value = "battleroyale">Battle Royale</option>
-    <option value = "rpg">Role-Play Games</option>
-    <option value = "fps">First-Person Shooter</option>
-    <option value = "strategy">Strategy Games</option>
-    <option value = "sim">The Sims</option>
-</select>
-<p>Where is your setup?</p>
-<select name = "setup">
-    <option value = "answer">Choose answer here</option>
-    <option value = "desk">Desk/Room</option>
-    <option value = "livingroom">Couch or Living Room area</option>
-    <option value = "office">Office/work</option>
-</select>
-<input type = "submit" value = "Submit">
-</form>
+    <div class = "grid-container">
+        <p>What platform do you play on?</p>
+        <form method = "post" action = "/results"> 
+        <select value = "platform" name = "platform"> Platform
+            <option value = "answer">Choose answer here</option>
+            <option value = "ps4">Playstation 4</option>
+            <option value = "xbox">Xbox One</option>
+            <option value = "pc">PC</option>
+            <option value = "nintendo switch">Nintendo Switch</option>
+            <option value = "phone">Phone</option>
+        </select>
+    </div>
+    <div class = "grid-container">
+        <p>What's your favorite video game genre?</p>
+        <select value = "genre" name = "genre"> Platform
+            <option value = "answer">Choose answer here</option>
+            <option value = "battleroyale">Battle Royale</option>
+            <option value = "rpg">Role-Play Games</option>
+            <option value = "fps">First-Person Shooter</option>
+            <option value = "sim">Strategy Games</option>
+            <option value = "sims">The Sims</option>
+        </select>
+    </div>
+    <div class = "grid-container">
+        <p>Where is your setup?</p> 
+        <select value = "setup" name = "setup">
+            <option value = "answer">Choose answer here</option>
+            <option value = "desk">Desk/Room</option>
+            <option value = "livingroom">Couch or Living Room area</option>
+            <option value = "office">Office/work</option>
+        </select>
+        <input type = "submit" value = "Submit">
+        </form>
+    </div>
 
 </body>
 </html>
